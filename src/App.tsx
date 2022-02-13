@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import { BrowserRouter as Router } from "react-router-dom";
 import { Switch, Route, Redirect } from "react-router";
+import Cookies from "js-cookie";
 
 import { Header } from "./Header";
 import { Login } from "./Login";
@@ -25,6 +26,12 @@ const PrivateRoute = ({auth, children, ...rest}: {
 function App() {
   const [loggedin, setLoggedin] = useState(false);
 
+  useEffect(() => {
+    if (localStorage.getItem("key")) {
+      setLoggedin(true);
+    }
+  })
+
   return (
     <div className="App">
 
@@ -37,6 +44,9 @@ function App() {
                 </PrivateRoute>
                 <Route path="/login">
                     <Login loggedin={loggedin} login={setLoggedin} />
+                </Route>
+                <Route path="/signup">
+                    
                 </Route>
             </Switch>
         </Router>

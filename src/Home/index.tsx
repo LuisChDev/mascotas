@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 
+import cons from "constantes";
+
 import petDog from "../assets/british-royal-family-pets-corgis.jpg";
 import petGuineaPig from "../assets/109_a-feature_pocket-pets_mobile.jpg";
 import petRabbit from "../assets/638-pets-guide-to-small-and-exotic-pets.jpg";
@@ -25,7 +27,7 @@ export const Home = () => {
           <Col>
             <h2>Esta es la página principal.</h2>
             <p>
-              Puedes buscar mascotas en adopción aquí.
+                Puedes buscar mascotas en adopción aquí.
             </p>
           </Col>
         </Row>
