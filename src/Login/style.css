@@ -1,0 +1,11 @@
+.loginCont {
+    display: flex;
+}
+
+.loginContText {
+    flex: 2;
+}
+
+.loginContForm {
+    flex: 3;
+}
